@@ -52,8 +52,5 @@ namespace Simulacro_C_Shasp_VAle.models
         protected void ShowAge(){
             Console.WriteLine($"Age: {CalculateAge()}");
         }
-
-
-
     }
 }
