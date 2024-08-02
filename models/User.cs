@@ -38,7 +38,9 @@ namespace Simulacro_C_Shasp_VAle.models
             Birthdate: {Birthdate}
             Email: {Email}
             Phone Number: {PhoneNumber}
-            Address: {Address}");
+            Address: {Address}
+            ");
+            ShowAge();
         }
 
         //metodo calcular edad
@@ -53,4 +55,4 @@ namespace Simulacro_C_Shasp_VAle.models
             Console.WriteLine($"Age: {CalculateAge()}");
         }
     }
-}
+} 
