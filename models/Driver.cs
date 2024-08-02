@@ -15,13 +15,7 @@ namespace Simulacro_C_Shasp_VAle.models
         //constructor
         public Driver(string name, string lastname, string identificationNumber, DateOnly birthdate, string email, string phoneNumber, string address, string licenseNumber, string licenseCategory, int drivingExperence): base(name, lastname, identificationNumber, birthdate, email, phoneNumber, address)
         {
-            Name = name;
-            LastName = lastname;
-            IdentificationNumber = identificationNumber;
-            Birthdate = birthdate;
-            Email = email;
-            PhoneNumber = phoneNumber;
-            Address = address;
+            
             LicenseNumber = licenseNumber;
             LicenseCategory = licenseCategory;
             DrivingExperience = drivingExperence;

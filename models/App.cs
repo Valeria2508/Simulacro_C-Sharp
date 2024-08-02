@@ -7,9 +7,9 @@ namespace Simulacro_C_Shasp_VAle.models
 {
     public class App
     {
-        public List<Vehicle> ListaVehiculos { get; set; } = new List<Vehicle>();
-        public List<Customer> ListaCustomeres { get; set; } = new List<Customer>();
-        public List<Driver> ListaDrivers { get; set; } = new List<Driver>();
+        public static List<Vehicle> ListaVehiculos { get; set; } = new List<Vehicle>();
+        public static List<Customer> ListaCustomeres { get; set; } = new List<Customer>();
+        public static List<Driver> ListaDrivers { get; set; } = new List<Driver>();
 
         public static void Menu()
         {
@@ -47,7 +47,7 @@ namespace Simulacro_C_Shasp_VAle.models
                         exit = true;
                         break;
                     case "1":
-                        App.AgregarVehiculo();
+                        // App.AgregarVehiculo();
 
                         break;
 
@@ -58,6 +58,39 @@ namespace Simulacro_C_Shasp_VAle.models
                 }
             }
         }
+
+        public static void AggregateVehicle(Vehicle vehicle)
+        {   
+            Console.WriteLine("tu id: ");
+            int id = Convert.ToInt32(Console.ReadLine);
+            Console.WriteLine("Ingresa la placa del vehiculo");
+            string placa = Console.ReadLine();
+            Console.WriteLine("Ingresa el tipo del vehiculo");
+            string tipo = Console.ReadLine();
+            Console.WriteLine("Ingresa el numero de motor del vehiculo");
+            string engineNumber = Console.ReadLine();
+            Console.WriteLine("Ingresa el numero de serie del vehiculo");
+            string serialNumber = Console.ReadLine();
+            Console.WriteLine("Ingresa la capacidad de pasajeros del vehiculo");
+            byte peopleCapacity = Convert.ToByte(Console.ReadLine());
+            Console.WriteLine("Ingresa el nombre del conductor");
+
+            
+
+            var driver = new Driver("nombre", "apellido", "identificacion", new DateOnly(1990, 1, 1), "email", "telefono", "direccion", "licencia", "categoría", 0);
+
+            var vh1 = new Vehicle(id,placa,tipo,engineNumber,serialNumber,peopleCapacity,driver);
+            ListaVehiculos.Add(vehicle);
+            ListaDrivers.Add(driver);
+        }
+
+         public void DeleteVehicle(int id, List<Vehicle> ListaVehiculos)
+        {
+            ListaVehiculos.RemoveAll(i => i.Id == id);
+            Console.WriteLine($"El vehículo con ID {id} ha sido eliminado.");
+        }
+
+
 
     }
 }
