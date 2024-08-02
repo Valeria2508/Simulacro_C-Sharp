@@ -20,5 +20,16 @@ namespace Simulacro_C_Shasp_VAle.models
             DrivingExperience = drivingExperence;
 
         }
+
+
+        //metodo para actualizar la nueva categoria
+        public void UpdateLicensecategory(string newCategory){
+            if (LicenseCategory!=null)
+            {
+                string oldCategory = LicenseCategory;
+                LicenseCategory = newCategory;
+                Console.WriteLine($"License category updated from {oldCategory} to {LicenseCategory}");
+            }
+        }
     }
 }
