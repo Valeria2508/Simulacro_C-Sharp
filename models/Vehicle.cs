@@ -29,7 +29,10 @@ namespace Simulacro_C_Shasp_VAle.models
             Owner = owner;
         }
 
-        
+        public void DeleteVehicle(int id, List<Vehicle> ListaVehiculos){
+            ListaVehiculos.RemoveAll(i=>i.Id == id);
+            Console.WriteLine($"El vehículo con ID {id} ha sido eliminado.");
+        }
 
     }
 }

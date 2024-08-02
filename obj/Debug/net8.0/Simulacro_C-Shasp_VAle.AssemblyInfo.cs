@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Simulacro_C-Shasp_VAle")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d6ff0a6a98404177947c97a114ea77c5022251f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05987ad3a9e1b8f51826d31ed6445f23fa5823f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Simulacro_C-Shasp_VAle")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Simulacro_C-Shasp_VAle")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

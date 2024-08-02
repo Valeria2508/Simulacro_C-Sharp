@@ -1,2 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Simulacro_C_Shasp_VAle.models;
+
+App.Menu();
