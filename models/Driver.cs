@@ -14,7 +14,7 @@ namespace Simulacro_C_Shasp_VAle.models
 
         //constructor
         public Driver(string licenseNumber, string licenseCategory, int drivingExperence)
-        {   
+        {
             LicenseNumber = licenseNumber;
             LicenseCategory = licenseCategory;
             DrivingExperience = drivingExperence;
@@ -23,23 +23,27 @@ namespace Simulacro_C_Shasp_VAle.models
 
 
         //metodo para actualizar la nueva categoria
-        public void UpdateLicensecategory(string newCategory){
-            if (LicenseCategory!=null)
+        public void UpdateLicensecategory(string newCategory)
+        {
+            if (LicenseCategory != null)
             {
                 string oldCategory = LicenseCategory;
                 LicenseCategory = newCategory;
-                Console.WriteLine($"License category updated from {oldCategory} to {LicenseCategory}");
+                Console.WriteLine($"Categoría de licencia actualizada de {oldCategory} a {LicenseCategory}");
             }
         }
 
 
-        public void AddExperience(int years){
-            if (DrivingExperience>0)
+
+        //metodo para añadir años de experiencia
+        public void AddExperience(int years)
+        {
+            if (DrivingExperience > 0)
             {
-                Console.WriteLine("Ingrese los años de experiencia que tiene manejando: ");
-                int newExperience = Convert.ToInt32(Console.ReadLine());
-                DrivingExperience += newExperience;
-                
+                int newExperience = DrivingExperience + years;
+                DrivingExperience = newExperience;
+                Console.WriteLine($"Experiencia de conducción actualizada a {DrivingExperience} años");
+
             }
         }
     }
