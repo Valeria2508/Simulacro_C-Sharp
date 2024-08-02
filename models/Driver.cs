@@ -31,5 +31,16 @@ namespace Simulacro_C_Shasp_VAle.models
                 Console.WriteLine($"License category updated from {oldCategory} to {LicenseCategory}");
             }
         }
+
+
+        public void AddExperience(int years){
+            if (DrivingExperience>0)
+            {
+                Console.WriteLine("Ingrese los años de experiencia que tiene manejando: ");
+                int newExperience = Convert.ToInt32(Console.ReadLine());
+                DrivingExperience += newExperience;
+                
+            }
+        }
     }
 }
