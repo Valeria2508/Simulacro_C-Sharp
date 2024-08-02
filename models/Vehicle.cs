@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace Simulacro_C_Shasp_VAle.models
 {
     public class Vehicle
-    {   
+    {
         // atributos
         public int Id { get; set; }
         public string Placa { get; set; }
@@ -29,9 +29,16 @@ namespace Simulacro_C_Shasp_VAle.models
             Owner = owner;
         }
 
-        public void DeleteVehicle(int id, List<Vehicle> ListaVehiculos){
-            ListaVehiculos.RemoveAll(i=>i.Id == id);
+        public void DeleteVehicle(int id, List<Vehicle> ListaVehiculos)
+        {
+            ListaVehiculos.RemoveAll(i => i.Id == id);
             Console.WriteLine($"El vehículo con ID {id} ha sido eliminado.");
+        }
+
+        public void AggregateVehicle(List<Vehicle> ListaVehicle)
+        {
+            Vehicle vh1 = new Vehicle():
+            ListaVehicle.Add()
         }
 
     }

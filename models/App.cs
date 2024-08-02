@@ -11,31 +11,51 @@ namespace Simulacro_C_Shasp_VAle.models
         public List<Customer> ListaCustomeres { get; set; } = new List<Customer>();
         public List<Driver> ListaDrivers { get; set; } = new List<Driver>();
 
+        public static void Menu()
+        {
 
-        public static void Menu(){
-            
             bool exit = false;
             while (!exit)
-            {   Console.WriteLine("------------------------------------");
+            {
+                Console.WriteLine("------------------------------------");
                 Console.WriteLine("Bienvedido al sistema TransRiwi");
-                Console.WriteLine("1. Elige una opcion");
-                Console.WriteLine("3. Agg Vehicle");
-                Console.WriteLine("3. Mostrar Vehicle");
+                Console.WriteLine("Elige una opcion");
+                Console.WriteLine("1. Agg Vehicle");
+                Console.WriteLine("2. Mostrar Vehicle");
                 Console.WriteLine("3. Editar Vehicle");
-                Console.WriteLine("3. Eliminar Vehicle");
+                Console.WriteLine("4. Eliminar Vehicle");
                 Console.WriteLine("------------------------------------");
-                Console.WriteLine("3. Agg Customer");
-                Console.WriteLine("3. Mostrar Customer");
-                Console.WriteLine("3. Editar Customer");
-                Console.WriteLine("3. Eliminar Customer");
+                Console.WriteLine("5. Agg Customer");
+                Console.WriteLine("6. Mostrar Customer");
+                Console.WriteLine("7. Editar Customer");
+                Console.WriteLine("8. Eliminar Customer");
                 Console.WriteLine("------------------------------------");
-                Console.WriteLine("3. Agg Driver");
-                Console.WriteLine("3. Mostrar Driver");
-                Console.WriteLine("3. Editar Driver");
-                Console.WriteLine("3. Eliminar Driver");
+                Console.WriteLine("9. Agg Driver");
+                Console.WriteLine("10. Mostrar Driver");
+                Console.WriteLine("11. Editar Driver");
+                Console.WriteLine("12. Eliminar Driver");
+                Console.WriteLine("13. Agg experiencia como driver");
                 Console.WriteLine("------------------------------------");
 
-                Console.WriteLine("2. Salir");
+                Console.WriteLine("0. Salir");
+
+                string option = Console.ReadLine();
+
+                switch (option)
+                {
+                    case "0":
+                        exit = true;
+                        break;
+                    case "1":
+                        App.AgregarVehiculo();
+
+                        break;
+
+                    default:
+                        Console.WriteLine("Opción no válida. Por favor, intente de nuevo.");
+                    
+                        break;
+                }
             }
         }
 
