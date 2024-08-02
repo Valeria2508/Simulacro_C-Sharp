@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Simulacro_C_Shasp_VAle.models
 {
-    public class Driver
+    public class Driver: User
     {   //atributis publicos
         public string LicenseNumber { get; set; }
         public string LicenseCategory { get; set; }
@@ -13,8 +13,15 @@ namespace Simulacro_C_Shasp_VAle.models
 
 
         //constructor
-        public Driver(string licenseNumber, string licenseCategory, int drivingExperence)
+        public Driver(string name, string lastname, string identificationNumber, DateOnly birthdate, string email, string phoneNumber, string address, string licenseNumber, string licenseCategory, int drivingExperence): base(name, lastname, identificationNumber, birthdate, email, phoneNumber, address)
         {
+            Name = name;
+            LastName = lastname;
+            IdentificationNumber = identificationNumber;
+            Birthdate = birthdate;
+            Email = email;
+            PhoneNumber = phoneNumber;
+            Address = address;
             LicenseNumber = licenseNumber;
             LicenseCategory = licenseCategory;
             DrivingExperience = drivingExperence;
